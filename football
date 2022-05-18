@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,cnt=0;
+    string str;
+    cin>>str;
+    int l=str.length();
+    for(i=0;i<l;i++){
+            cnt=1;
+        if(str[i]=='0'){
+            for(int j=i+1;j<l;j++){
+                if(str[i]==str[j])
+                    cnt++;
+                    else break;
+            }
+        }
+        else if(str[i]=='1'){
+            for(int k=i+1;k<l;k++){
+                if(str[i]==str[k])
+                    cnt++;
+                    else break;
+            }
+        }
+        if(cnt>=7)
+            break;
+        }
+        if(cnt>=7)
+            cout<<"YES";
+        else
+            cout<<"NO";
+        return 0;
+    }
